@@ -5,7 +5,7 @@ import "fmt"
 func ShowLine(line []byte) {
 	var i int
 	for i = 0; i < len(line); i++ {
-		fmt.Printf("%02X", line[i])
+		fmt.Printf(" %02X", line[i])
 	}
 	for ; i < 16; i++ {
 		fmt.Printf("   ")
@@ -18,6 +18,7 @@ func ShowLine(line []byte) {
 			fmt.Printf(".")
 		}
 	}
+	fmt.Printf("\n")
 }
 
 func ShowHex(data []byte) {
